@@ -6,7 +6,7 @@ const products = require('./src/products.json')
 const stock = require('./src/stock.json')
 
 const corsOptions = {  
-  origin:'http://localhost/5000',
+  origin:'https://api-coffee-gilt.vercel.app/',
   optionsSuccessStatus: 200
 }
 
