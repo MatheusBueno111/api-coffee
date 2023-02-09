@@ -12,6 +12,14 @@ app.get("/products", (req, res) => {
   return res.json(products);
 });
 
+app.get("/products/:id", (req, res) => {
+  const { id } = req.params
+  const formatedIdToNumber = +id 
+  const product = products.find((product) => product.id === formatedIdToNumber)
+
+  return res.status(201).send(product)
+});
+
 
 app.get("/stock", (req, res) => {
   return res.json(stock);
