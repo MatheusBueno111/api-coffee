@@ -5,12 +5,9 @@ const cors = require('cors')
 const products = require('./src/products.json')
 const stock = require('./src/stock.json')
 
-const corsOptions = {  
-  origin:'https://api-coffee-gilt.vercel.app/',
-  optionsSuccessStatus: 200
-}
+app.use(cors());
 
-app.get("/products", cors(corsOptions), (req, res) => {
+app.get("/products", (req, res) => {
   return res.json(products);
 });
 
